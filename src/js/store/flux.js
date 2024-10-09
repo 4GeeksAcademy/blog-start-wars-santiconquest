@@ -58,9 +58,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch('https://swapi.dev/api/starships')
 				.then((response)=>response.json())
 				.then((data)=>setStore({ starships: data.results }))
-			//Preguntar como puedo traer swapi.dev/api/people
-			//Pregintar como hacer correctamente el layout para un nuevo personaje
-			//Preguntar como poner un if en el boton de favoritos 
 			},
 			loadSomePeople: () => {
 				/**
@@ -130,6 +127,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				setStore({ message: planetName })
 				
+			},
+			deleteFav: (starship)=> {
+				console.log(starship)
+				const store = getStore();
+				 
+					setStore({ 
+						myStarships:store.myStarships.filter((item)=>item!==starship) 
+					})
+				return setStore()
+				 
 			},
 			changeColor: (index, color) => {
 				//get the store

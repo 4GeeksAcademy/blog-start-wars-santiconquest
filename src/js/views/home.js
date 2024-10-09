@@ -34,7 +34,7 @@ export const Home = () => {
 						model={starship.model}
 					/> )}
 				</div> */}
-				<h1>Personajes desde FLUX</h1>
+				<h1>Characters</h1>
 				<div className="row flex-row flex-nowrap" style={{overflowX:'auto'}}>
 					{store.characters.map( (character)=> 
 					<Cardcharacter 
@@ -45,7 +45,7 @@ export const Home = () => {
 						hair_color={character.hair_color}
 					/> )}
 				</div>
-				<h1>Planetas desde FLUX</h1>
+				<h1>Planets</h1>
 				<div className="row flex-row flex-nowrap" style={{overflowX:'auto'}}>
 					{store.planets.map( (planet)=> 
 					<Cardplanet 

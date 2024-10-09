@@ -4,6 +4,7 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
+	console.log(store.myStarships)
 	
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
@@ -14,15 +15,21 @@ export const Navbar = () => {
 				
 				
 				<div class="dropdown">
-					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-						Favorites
+					<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+						Favorites {store.myStarships.length}
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 						<li class="dropdown-item ">
 							<div>
-								{store.myStarships.map((starship)=><li>{starship}
-									<i class="fas fa-trash"></i></li>)}
-								{store.myStarships.length===0? "empty" : null}
+								{store.myStarships.map((starship)=>
+								<li>{starship}
+									<i class="fas fa-trash" onClick={()=>
+										{actions.deleteFav(starship)}
+										//console.log("delete task")
+										//Preguntar como puedo setear un estado en flux para poder eliminar de favoritos
+										
+										}></i></li>)}
+								{store.myStarships.length===0? "(empty)" : null}
 							</div>
 							
 						</li>

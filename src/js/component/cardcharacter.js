@@ -8,7 +8,7 @@ export const Cardcharacter= (props) => {
 	const { store, actions } = useContext(Context);
 
 	return (
-        <div className="card mx-3" style={{width: "18rem"}}>
+        <div className="card m-3" style={{width: "18rem"}}>
 			<img src={rigoImage} className="card-img-top" alt="..." />
 			<div className="card-body">
 				<h5 className="card-title">{props.name}</h5>
