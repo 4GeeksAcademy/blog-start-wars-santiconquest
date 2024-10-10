@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import rigoImage from "../../img/rigo-baby.jpg";
 
 export const Planet = props => {
 	const { store, actions } = useContext(Context);
@@ -19,10 +20,47 @@ export const Planet = props => {
 
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {params.planet_id}</h1>
+			{/* <h1 className="display-4">This will show the demo element: {params.planet_id}</h1> */}
 
-			<p>Population: {planetData.population}</p>
-			<p>Terrain: {planetData.terrain}</p>
+			<div className="card mb-3" style={{width:'540px'}}>
+				<div className="row g-0">
+					<div className="col-md-4">
+						<img src={rigoImage}  className="img-fluid rounded-start" alt="..." />
+					</div>
+					<div className="col-md-8">
+						<div className="card-body">
+							<h5 className="card-title">{planetData.name}</h5>
+							<p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+					</div>
+					<div className="card-footer bg-transparent border-danger row text-danger d-flex flex-nowrap">
+						<div className="col">
+								<div >Name</div>
+								<p > {planetData.name}</p>
+							</div>
+							<div className="col">
+								<div >Climate</div>
+								<p > {planetData.climate}</p>
+							</div>
+							<div className="col">
+								<div >Population</div>
+								<p > {planetData.population}</p>
+							</div>
+							<div className="col">
+								<div >Orbital period</div>
+								<p > {planetData.orbital_period}</p>
+							</div>
+							<div  className="col">
+								<div>Rotation period</div>
+								<p >{planetData.rotation_period}</p>
+							</div>
+							<div className="col">
+								<div >Diameter</div>
+								<p >{planetData.diameter}</p>
+							</div>
+					</div>
+				</div>
+			</div>
 
 			<hr className="my-4" />
 

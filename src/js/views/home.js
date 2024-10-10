@@ -43,6 +43,7 @@ export const Home = () => {
 						name={character.name}
 						eye_color={character.eye_color}
 						hair_color={character.hair_color}
+						gender={character.gender}
 					/> )}
 				</div>
 				<h1>Planets</h1>

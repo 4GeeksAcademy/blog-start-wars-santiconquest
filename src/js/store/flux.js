@@ -23,26 +23,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					url: "2",
 				}
 			],
-			characters: [
-				{
-					name: "FIRST",
-					url: "1",
-				},
-				{
-					name: "SECOND",
-					url: "2",
-				}
-			],
-			planets: [
-				{
-					name: "FIRST",
-					url: "1",
-				},
-				{
-					name: "SECOND",
-					url: "2",
-				}
-			],
+			characters: [],
+			planets: [],
 			myStarships:[]
 		},
 		actions: {

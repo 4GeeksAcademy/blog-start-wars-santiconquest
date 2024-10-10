@@ -12,8 +12,8 @@ export const Cardplanet= (props) => {
 			<img src={rigoImage} className="card-img-top" alt="..." />
 			<div className="card-body">
 				<h5 className="card-title">{props.name}</h5>
-				<p className="card-text">{props.population}</p>
-				<p className="card-text">{props.terrain}</p>
+				<p className="card-text">Population: {props.population}</p>
+				<p className="card-text">Terrain: {props.terrain}</p>
 				<Link to={"/planet/"+props.uid} className="btn btn-primary" >Ver {props.uid}</Link>
 				<button type="button" className="btn btn-light" onClick={()=>actions.AgregarPlanetaFavorito(props.name)} > <i className="far fa-heart"></i> </button>
 			</div>

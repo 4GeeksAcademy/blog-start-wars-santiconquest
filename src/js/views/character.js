@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
+import rigoImage from "../../img/rigo-baby.jpg";
 import { Context } from "../store/appContext";
 
 export const Character = props => {
@@ -19,11 +20,49 @@ export const Character = props => {
 
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {params.character_id}</h1>
+			{/* <h1 className="display-4">This will show the demo element: {params.character_id}</h1> */}
 
-			<p>Gender: {characterData.gender}</p>
-			<p>Hair color: {characterData.hair_color}</p>
-			<p>Eye color: {characterData.eye_color}</p>
+			<div className="card mb-3" style={{width:'540px'}}>
+				<div className="row g-0">
+					<div className="col-md-4">
+						<img src={rigoImage}  className="img-fluid rounded-start" alt="..." />
+					</div>
+					<div className="col-md-8">
+						<div className="card-body">
+							<h5 className="card-title">{characterData.name}</h5>
+							<p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+					</div>
+					<div className="card-footer bg-transparent border-danger row text-danger d-flex flex-nowrap">
+						<div className="col">
+							<div >Name</div>
+								<p > {characterData.name}</p>
+							</div>
+							<div className="col">
+								<div >Birth year</div>
+								<p > {characterData.birth_year}</p>
+							</div>
+							<div className="col">
+								<div >Gender</div>
+								<p > {characterData.gender}</p>
+							</div>
+							<div className="col">
+								<div >Height</div>
+								<p > {characterData.height}</p>
+							</div>
+							<div  className="col">
+								<div>Skin color</div>
+								<p >{characterData.skin_color}</p>
+							</div>
+							<div className="col">
+								<div >Eye color</div>
+								<p >{characterData.eye_color}</p>
+							</div>
+					</div>
+				</div>
+			</div>
+
+			
 
 			<hr className="my-4" />
 

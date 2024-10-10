@@ -16,7 +16,7 @@ export const Navbar = () => {
 				
 				<div class="dropdown">
 					<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-						Favorites {store.myStarships.length}
+						Favorites <span class="badge bg-secondary">{store.myStarships.length}</span>
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 						<li class="dropdown-item ">
