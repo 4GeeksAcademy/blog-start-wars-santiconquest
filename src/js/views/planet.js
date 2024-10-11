@@ -25,7 +25,9 @@ export const Planet = props => {
 			<div className="card mb-3" style={{width:'540px'}}>
 				<div className="row g-0">
 					<div className="col-md-4">
-						<img src={rigoImage}  className="img-fluid rounded-start" alt="..." />
+						{/* <img src={rigoImage}  className="img-fluid rounded-start" alt="..." /> */}
+						<img style={{  objectFit: "cover" }} src={`https://starwars-visualguide.com/assets/img/planets/${params.planet_id}.jpg`} className="card-img-top " alt="..." />
+
 					</div>
 					<div className="col-md-8">
 						<div className="card-body">

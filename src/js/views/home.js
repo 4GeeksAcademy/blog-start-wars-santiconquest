@@ -13,27 +13,9 @@ export const Home = () => {
 	
 	const [starships,setStarships]=useState([])
 	const [characters,setCharacters]=useState([])
-/* 
-	useEffect(()=>{
-		console.log("Se cargo Home")
-		fetch('https://www.swapi.tech/api/starships')
-		.then((response)=>response.json())
-		.then((data)=>setStarships(data.results))
-	},[])
- */
+
 	return (
 			<div className="text-center mt-5">
-				
-				{/* <h1>Naves desde FLUX</h1>
-				<div className="row flex-row flex-nowrap" style={{overflowX:'auto'}}>
-					{store.starships.map( (starship)=> 
-					<Cardnave 
-						key={starship.url} 
-						uid={starship.url.replace("https://swapi.dev/api/starships/","").replace("/","")} 
-						name={starship.name}
-						model={starship.model}
-					/> )}
-				</div> */}
 				<h1>Characters</h1>
 				<div className="row flex-row flex-nowrap" style={{overflowX:'auto'}}>
 					{store.characters.map( (character)=> 
